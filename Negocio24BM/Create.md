@@ -1,3 +1,4 @@
+```sql
 CREATE DATABASE Negocio24BM;
 GO
 
@@ -31,3 +32,4 @@ CREATE TABLE Empleado (
     FOREIGN KEY (FkPuesto) REFERENCES Puesto(PkPuesto),
     FOREIGN KEY (FkDepartamento) REFERENCES Departamento(PkDepartamento)
 )
+```

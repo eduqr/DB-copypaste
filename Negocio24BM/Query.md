@@ -1,16 +1,18 @@
--- =============================================
--- Tema:    Joins
--- Fecha:   ?
--- Notas:   El ON es lo que tienen en común
--- =============================================
+|Tema|Joins|
+|-|-|
+|Fecha|?|
+|Notas|El ON es lo que tienen en común|
 
+```sql
 -- 1 --
 SELECT T1.Nombre, T1.Apellido, T2.Nombre AS Puesto, T3.Nombre AS Departamento, T4.Nombre AS Ciudad
 FROM Empleado AS T1
 INNER JOIN Puesto AS T2 ON T1.FkPuesto = T2.PkPuesto
 LEFT JOIN Departamento AS T3 ON T1.FkDepartamento = T3.PkDepartamento
 LEFT JOIN Ciudad AS T4 ON T1.Ciudad = T4.Abreviatura
+```
 
+```sql
 -- 2 --
 SELECT T1.Nombre, T1.Apellido, T2.Nombre AS Puesto, T3.Nombre AS Departamento, T4.Nombre AS Ciudad
 FROM Empleado AS T1
@@ -19,32 +21,17 @@ LEFT JOIN Departamento AS T3 ON T1.FkDepartamento = T3.PkDepartamento
 LEFT JOIN Ciudad AS T4 ON T1.Ciudad = T4.Abreviatura
 WHERE T4.Nombre = 'QUINTANA ROO' AND T3.Nombre = 'Dirección'
 ORDER BY T1.Apellido ASC
+```
+
+---
+
+|Tema|Procedimientos almacenados|
+|-|-|
+|Fecha|Oct 13|
+|Notas|Para ejecutar se usa ```execute <nombreDelProcedimiento>```|
 
 
-
--- =============================================
--- Tema:    Procedimientos almacenados
--- Fecha:   Oct 13
--- Notas:   -
--- =============================================
-
--- 0 -- Sintaxis
-CREATE PROCEDURE -- Nombre
-    -- Parámetros
-AS
-BEGIN
--- Lógica
-END
-
--- 0.1 -- Ejecución (después de crear)
-execute spGetEmpleados 'Gerente', 'QR'
-
--- 0.2 -- Variables para parámetros
-@Nombre tipoDato
-@Puesto varchar(50)
-
-
-
+```sql
 -- 1 --
 CREATE PROCEDURE spGetEmpleados
     @Puesto varchar(50),
@@ -59,7 +46,9 @@ BEGIN
     INNER JOIN Puesto AS B ON a.FkPuesto = b.PkPuesto
     WHERE B.Nombre = @Puesto AND A.Ciudad = @Ciudad
 END
+```
 
+```sql
 -- 2 -- Insert y select
 CREATE PROCEDURE spGeneratePuesto
     @Nombre varchar(50)
@@ -69,3 +58,4 @@ BEGIN
     SELECT *
     FROM Puesto
 END
+```

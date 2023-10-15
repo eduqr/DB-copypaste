@@ -1,3 +1,4 @@
+```sql
 INSERT INTO PUESTO VALUES('Gerente')
 INSERT INTO PUESTO VALUES('Administrador')
 INSERT INTO PUESTO VALUES ('Coordinador')
@@ -47,3 +48,4 @@ INSERT INTO Empleado VALUES ('Beto', 'Estrada', 'SM248', 'QR', 2, 3);
 INSERT INTO Empleado VALUES ('Adrian', 'Valdez', 'SM41', 'QR', 2, 1);
 INSERT INTO Empleado VALUES ('Luz', 'Acosta', 'Rg 94', 'QR', 3, 7);
 INSERT INTO Empleado VALUES ('Jose', 'May', 'Fracc.Arrecifes', 'QR', 2, 3);
+```
