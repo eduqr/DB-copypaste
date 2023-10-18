@@ -59,3 +59,33 @@ BEGIN
     FROM Puesto
 END
 ```
+
+```sql
+-- 18/10/2023
+CREATE PROCEDURE spCreateFullRecord
+@AbreviaturaCiudad varchar(50) = null,
+	@NombreCiudad varchar(50) = null,
+	
+	@NombreDepartamento varchar(50) = null,
+	
+	@NombrePuesto varchar(50) = null,
+
+	@NombreEmpleado varchar(50) = null,
+	@ApellidoEmpleado varchar(50) = null,
+	@DireccionEmpleado varchar(50) = null
+AS
+BEGIN
+	DECLARE @IdPuesto int = null;
+	DECLARE @IdDepartamento int = null;
+
+	EXECUTE spCreateCiudad @AbreviaturaCiudad, @NombreCiudad;
+	
+	EXECUTE spCreateDepartamento @NombreDepartamento;
+	SET @IdDepartamento = @@Identity;
+	
+	EXECUTE spCreatePuesto @NombrePuesto;
+	SET @IdPuesto = @@Identity;
+	
+	EXECUTE spCreateEmpleado @NombreEmpleado, @ApellidoEmpleado, @DireccionEmpleado, @AbreviaturaCiudad, @IdPuesto, @IdDepartamento;
+END
+```
