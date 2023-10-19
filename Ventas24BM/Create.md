@@ -1,0 +1,56 @@
+```sql
+CREATE DATABASE Ventas24BM;
+GO
+
+USE Ventas24BM;
+GO
+
+CREATE TABLE CATEGORIA (
+    PkCategoria INT PRIMARY KEY IDENTITY(1, 1),
+    nombre VARCHAR(50),
+	descripcion VARCHAR(250)
+)
+
+CREATE TABLE PRODUCTO (
+    PkProducto INT PRIMARY KEY IDENTITY(1, 1),
+	precio DECIMAL,
+	stock INT,
+	FkCategoria INT,
+	FOREIGN KEY (FkCategoria) REFERENCES CATEGORIA(PkCategoria)
+)
+
+CREATE TABLE CLIENTE (
+	PkCliente INT PRIMARY KEY IDENTITY(1,1),
+	nombre VARCHAR(50),
+	apellido VARCHAR(50),
+	direccion VARCHAR(50),
+	fecha_nacimiento DATE,
+	telefono VARCHAR(15),
+	email VARCHAR(50)
+)
+
+CREATE TABLE MODO_PAGO (
+    PkPago INT PRIMARY KEY IDENTITY(1, 1),
+    nombre VARCHAR(50),
+	otros_detalles VARCHAR(250)
+)
+
+CREATE TABLE FACTURA (
+    PkFactura INT PRIMARY KEY IDENTITY(1, 1),
+    FkCliente INT,
+	fecha DATE,
+	FkPago INT,
+	FOREIGN KEY (FkCliente) REFERENCES CLIENTE(PkCliente),
+	FOREIGN KEY (FkPago) REFERENCES MODO_PAGO(PkPago)
+)
+
+CREATE TABLE DETALLE (
+	PkDetalle INT PRIMARY KEY IDENTITY(1,1),
+	FkFactura INT,
+	FkProducto INT,
+	cantidad INT,
+	precio DECIMAL,
+	FOREIGN KEY (FkProducto) REFERENCES PRODUCTO(PkProducto),
+	FOREIGN KEY (FkFactura) REFERENCES FACTURA(PkFactura)
+)
+```
