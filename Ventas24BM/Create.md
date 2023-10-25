@@ -13,7 +13,7 @@ CREATE TABLE CATEGORIA (
 
 CREATE TABLE PRODUCTO (
     	PkProducto INT PRIMARY KEY IDENTITY(1, 1),
-	Nombre VARCHAR(60),
+	nombre VARCHAR(60),
 	precio DECIMAL,
 	stock INT,
 	FkCategoria INT,
