@@ -6,13 +6,13 @@ USE Ventas24BM;
 GO
 
 CREATE TABLE CATEGORIA (
-    PkCategoria INT PRIMARY KEY IDENTITY(1, 1),
-    nombre VARCHAR(50),
+	PkCategoria INT PRIMARY KEY IDENTITY(1, 1),
+	nombre VARCHAR(50),
 	descripcion VARCHAR(250)
 )
 
 CREATE TABLE PRODUCTO (
-    PkProducto INT PRIMARY KEY IDENTITY(1, 1),
+    	PkProducto INT PRIMARY KEY IDENTITY(1, 1),
 	precio DECIMAL,
 	stock INT,
 	FkCategoria INT,
@@ -30,14 +30,14 @@ CREATE TABLE CLIENTE (
 )
 
 CREATE TABLE MODO_PAGO (
-    PkPago INT PRIMARY KEY IDENTITY(1, 1),
-    nombre VARCHAR(50),
+	PkPago INT PRIMARY KEY IDENTITY(1, 1),
+	nombre VARCHAR(50),
 	otros_detalles VARCHAR(250)
 )
 
 CREATE TABLE FACTURA (
-    PkFactura INT PRIMARY KEY IDENTITY(1, 1),
-    FkCliente INT,
+    	PkFactura INT PRIMARY KEY IDENTITY(1, 1),
+    	FkCliente INT,
 	fecha DATE,
 	FkPago INT,
 	FOREIGN KEY (FkCliente) REFERENCES CLIENTE(PkCliente),
