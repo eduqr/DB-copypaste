@@ -1,6 +1,6 @@
 ```sql
-INSERT INTO PUESTO VALUES('Gerente')
-INSERT INTO PUESTO VALUES('Administrador')
+INSERT INTO PUESTO VALUES ('Gerente')
+INSERT INTO PUESTO VALUES ('Administrador')
 INSERT INTO PUESTO VALUES ('Coordinador')
 INSERT INTO PUESTO VALUES ('Presidente')
 INSERT INTO PUESTO VALUES ('Director')
@@ -16,14 +16,14 @@ INSERT INTO DEPARTAMENTO VALUES ('Becario')
 
 INSERT INTO CIUDAD VALUES ('QR', 'QUINTANA ROO')
 INSERT INTO CIUDAD VALUES ('CH','Chiapas')
-INSERT INTO Ciudad VALUES('CX','Ciudad de Mèxico')
-INSERT INTO Ciudad VALUES('MX','México')
-INSERT INTO Ciudad VALUES('NL','Nuevo León')
+INSERT INTO Ciudad VALUES ('CX','Ciudad de Mèxico')
+INSERT INTO Ciudad VALUES ('MX','México')
+INSERT INTO Ciudad VALUES ('NL','Nuevo León')
 INSERT INTO Ciudad VALUES ('VZ', 'VERACRUZ')
-INSERT INTO Ciudad VALUES('TB','TABASCO')
+INSERT INTO Ciudad VALUES ('TB','TABASCO')
 INSERT INTO Ciudad VALUES ('TL', 'Tlaxcala')
-INSERT INTO CIUDAD VALUES('YN','Yucatán')
-INSERT INTO CIUDAD VALUES('OX','Oaxaca')
+INSERT INTO CIUDAD VALUES ('YN','Yucatán')
+INSERT INTO CIUDAD VALUES ('OX','Oaxaca')
 
 INSERT INTO Empleado VALUES ('Alejandra', 'Cruz', 'Fracciones Arrecifes', 'QR', 1, 1);
 INSERT INTO Empleado VALUES ('Jonathan', 'Hernandez', 'Nikté', 'TL', 2, 3);
