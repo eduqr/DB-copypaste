@@ -16,33 +16,30 @@ INSERT INTO CATEGORIA VALUES ('Farmacia', 'Todo tipo de Farmacéuticos');
 INSERT INTO CATEGORIA VALUES ('Computo', 'Todas las computadoras');
 INSERT INTO CATEGORIA VALUES ('Línea Blanca', 'Electrodomésticos de hogar');
 
-INSERT INTO PRODUCTO VALUES ('SmartTV', 2300, 19, 1);
-INSERT INTO PRODUCTO VALUES ('Lavadora 16kg', 5999.99,15,10);
-INSERT INTO PRODUCTO VALUES ('Pan dulce', 10, 3);
-INSERT INTO PRODUCTO VALUES ('Botas', 299, 10);
-INSERT INTO PRODUCTO VALUES ('Teléfono Samsung', 599.99, 1);
-INSERT INTO PRODUCTO VALUES ('Telefono Huawei', 4500, 1);
-INSERT INTO PRODUCTO VALUES ('Teléfono móvil', 599.99, 1);
-INSERT INTO PRODUCTO VALUES ('Laptop HP', 3599.99, 1);
-INSERT INTO PRODUCTO VALUES ('Mac air M2', 32000, 1);
-INSERT INTO PRODUCTO VALUES ('Papel de baño de 50pz', 99.99, 2);
-INSERT INTO PRODUCTO VALUES ('Cereal Zucaritas', 29.99, 2);
-INSERT INTO PRODUCTO VALUES ('Don Julio', 599.99, 3);
-INSERT INTO PRODUCTO VALUES ('Blue Label de Johnnie Walker', 2999.99, 3);
-INSERT INTO PRODUCTO VALUES ('Chaqueta de cuero', 599.99, 4);
-INSERT INTO PRODUCTO VALUES ('Juguetes Color Roja', 399.99, 4);
-INSERT INTO PRODUCTO VALUES ('Globo', 19.99, 5);
-INSERT INTO PRODUCTO VALUES ('Otro producto', 159.99, 5);
-INSERT INTO PRODUCTO VALUES ('T-REx Za-za-za', 499.99, 5);
-INSERT INTO PRODUCTO VALUES ('Rumi', 200.00, 5);
-INSERT INTO PRODUCTO VALUES('Chaqueta de cuero', 599.99, 10, 4);
-INSERT INTO PRODUCTO VALUES('Judie Color roja ', 399.99, 10, 4);
-INSERT INTO PRODUCTO VALUES('Globo ', 19.99, 16, 5);
-INSERT INTO PRODUCTO VALUES ('Hot Wheels',40,200,10);
-INSERT INTO PRODUCTO VALUES('Nike', 159.99, 16, 5);
-INSERT INTO PRODUCTO VALUES('T-REx Za-za-za', 499.99, 16, 5);
-INSERT INTO PRODUCTO VALUES('Rumi ', 200.00, 12, 5);
-INSERT INTO PRODUCTO VALUES ('Legos',2000,150,10);
+INSERT INTO Producto VALUES ('SmartTV', 2300, 19, 1)
+INSERT INTO Producto VALUES ('Lavadora 16kg', 5999.99,30, 10)
+INSERT INTO Producto VALUES ('Pan dulce',8,80, 3)
+INSERT INTO Producto VALUES ('Botas', 299,30, 2)
+INSERT INTO Producto VALUES ('Teléfono Samsung', 599.99,60, 1)
+INSERT INTO Producto VALUES ('Telefono Huawei', 4500,55, 1)
+INSERT INTO Producto VALUES ('Teléfono móvil', 599.99,40, 1)
+INSERT INTO Producto VALUES ('Laptop HP', 3599.99,29, 9)
+INSERT INTO Producto VALUES ('Mac air M2', 32000,46,9)
+INSERT INTO Producto VALUES ('Papel de baño de 50pz', 99.99,100, 4);
+INSERT INTO Producto VALUES ('Cereal Zucaritas', 29.99,150,4)
+INSERT INTO Producto VALUES ('Don Julio', 599.99,80, 4)
+INSERT INTO Producto VALUES ('Blue Label de Johnnie Walker', 2999.99,50, 4)
+INSERT INTO Producto VALUES ('Chaqueta de cuero', 599.99,30, 2)
+INSERT INTO Producto VALUES ('Juguetes Color Roja', 399.99,50, 7)
+INSERT INTO Producto VALUES ('Globo', 19.99,460,7)
+INSERT INTO Producto VALUES ('T-REx Za-za-za', 499.99,144, 7)
+INSERT INTO Producto VALUES ('Chaqueta de cuero', 599.99, 10, 2)
+INSERT INTO Producto VALUES ('Judie Color roja ', 399.99, 10, 2)
+INSERT INTO Producto VALUES ('Hot Wheels',40,200,7)
+INSERT INTO Producto VALUES ('Nike', 159.99, 16, 5)
+INSERT INTO Producto VALUES ('Adidas', 499.99, 16, 5)
+INSERT INTO Producto VALUES ('Flexi', 200.00, 12, 5)
+INSERT INTO Producto VALUES ('Legos',2000,150,7)
 
 INSERT INTO Cliente VALUES ('Eduardo', 'Landero', 'Av. Cancún', '2004-05-15', '998-442-7970', 'edurl@gmail.com');
 INSERT INTO Cliente VALUES ('Juan', 'Pérez', 'Calle Principal', '2000-05-15', '123-456-7890', 'juan@email.com');
@@ -114,5 +111,4 @@ INSERT INTO Detalle VALUES (9, 18, 5, 5.50);
 INSERT INTO Detalle VALUES (10, 19, 3, 17.75);
 INSERT INTO Detalle VALUES (10, 20, 2, 11.00);
 INSERT INTO Detalle VALUES (3, 2, 5, 22.99);
-
 ```
