@@ -12,7 +12,7 @@ BEGIN
 			T2.fecha AS Fecha_Factura,
 			T3.nombre AS Tipo_Pago
 	FROM CLIENTE AS T1
-	INNER JOIN FACTURA AS T2 ON T1.PkCliente = T2.PkFactura
+	INNER JOIN FACTURA AS T2 ON T1.PkCliente = T2.FkCliente
 	LEFT JOIN MODO_PAGO AS T3 ON T3.PkPago = T2.FkPago
 	WHERE T2.fecha BETWEEN @StartDate AND @EndDate
 END
@@ -72,7 +72,23 @@ EXEC spReportSalesInfo 'DESC', 4
 ```
 
 ```sql
+-- 4 -- Eduardo Rodríguez 24BM
+CREATE PROCEDURE spCustomDiscounts
+	@Discount INT
+AS
+BEGIN
+	SELECT T1.nombre AS Nombre,
+			T1.stock AS Cantidad,
+			T1.precio AS Precio,
+			T2.nombre AS Categoría,
+			T2.descripcion AS Descripción,
+			T1.precio * (1 - (@Discount * 0.01)) AS Precio_Con_Descuento
+	FROM PRODUCTO AS T1
+	INNER JOIN CATEGORIA AS T2 ON T1.FkCategoria = T2.PkCategoria
+END
 
+-- Ejecutar
+EXEC spCustomDiscounts 30
 ```
 
 ```sql
