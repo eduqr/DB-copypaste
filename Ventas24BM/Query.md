@@ -31,7 +31,7 @@ BEGIN
 	SELECT T1.nombre AS Nombre,
 			T2.PkFactura AS Num_Factura
 	FROM CLIENTE AS T1
-	RIGHT JOIN FACTURA AS T2 ON T1.PkCliente = T2.PkFactura
+	RIGHT JOIN FACTURA AS T2 ON T1.PkCliente = T2.FkCliente
 	WHERE (@ClientID IS NULL OR T1.PkCliente = @ClientID)
 	
 	SELECT Nombre AS Nombre_Producto
