@@ -92,5 +92,24 @@ EXEC spCustomDiscounts 30
 ```
 
 ```sql
+-- 5 -- Eduardo Rodríguez 24BM
+CREATE PROCEDURE spSimulation
+	@ProductName VARCHAR(50) = null
+AS
+BEGIN
+	SELECT T1.cantidad * T1.precio AS Precio_Total,
+			T2.nombre AS Producto,
+			T3.nombre AS Categoría,
+			T4.otros_detalles AS Método_Pago,
+			T2.stock AS Stock
+	FROM DETALLE AS T1
+	INNER JOIN PRODUCTO AS T2 ON T1.FkProducto = T2.PkProducto
+	LEFT JOIN CATEGORIA AS T3 ON T2.FkCategoria = T3.PkCategoria
+	LEFT JOIN FACTURA AS T0 ON T1.cantidad = T0.PkFactura
+	LEFT JOIN MODO_PAGO AS T4 ON T0.FkPago = T4.PkPago
+	WHERE T2.nombre = @ProductName
+END
 
+-- Ejecutar
+EXEC spSimulation 'Botas'
 ```
